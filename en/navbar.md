@@ -1,0 +1,1 @@
+<li style="cursor:pointer" onClick="ToChinese()">中文</li>
