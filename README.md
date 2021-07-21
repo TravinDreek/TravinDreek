@@ -1,8 +1,12 @@
-# Hello There
-I am **Peaksol**, a senior high school student. A few years ago, I found myself interested in programming and started to learn it by myself. So far, I've made lots of progress on it.
+# Get to know me...
+Hello, there! My name is **Peaksol**, a random developer. I don't like spending much time on a README file so here I am making it simple about what I am doing:
+- Creating Bukkit (and somehow PocketMine) plugins
+- Frontend and backend Web developments
+- Making bots on QQ
+- Coding some random stuffs
 
-I love playing Minecraft, and that's why most of my projects are about it as you can see. Take a quick look at [my homepage](https://peaksol.fun/), and learn more about me and what I am doing!
+And here are some of the programming languages that I use for my projects:
 
-| Languages I Use Most | My GitHub Stats |
-| - | - |
-| ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=TravinDreek) | ![Peaksol's Github Stats](https://github-readme-stats.vercel.app/api?username=TravinDreek&show_icons=true) |
+![Lang](https://github-readme-stats.vercel.app/api/top-langs/?username=TravinDreek&layout=compact&theme=tokyonight)
+
+Take a quick look at [my homepage](https://peaksol.fun/), and learn more about me and what I am doing!
