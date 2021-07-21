@@ -1,7 +1,7 @@
 # Get to know me...
-Hello, there! My name is **Peaksol**, a random developer. I don't like spending much time on a README file so here I am making it simple about what I am doing:
+Hello, there! I am **Peaksol**, a random developer. I don't like spending much time on a README file so here I am making it simple about what I am doing:
 - Creating Bukkit (and somehow PocketMine) plugins
-- Frontend and backend Web developments
+- Frontend and backend Web development
 - Making bots on QQ
 - Coding some random stuffs
 
