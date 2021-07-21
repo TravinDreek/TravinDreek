@@ -2,7 +2,7 @@
 Hello, there! I am **Peaksol**, a random developer. I don't like spending much time on a README file so here I am making it simple about what I am doing:
 - Creating Bukkit (and somehow PocketMine) plugins
 - Frontend and backend Web development
-- Making bots on QQ
+- Making bots that run on Discord and QQ
 - Coding some random stuffs
 
 And here are some of the programming languages that I use for my projects:
