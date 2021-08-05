@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Peaksol's Web Router</title>
+	<style type="text/css">
+		@keyframes fadeIn {
+			from { opacity: 0 }
+			to { opacity: 1 }
+		}
+
+		body {
+			background-color: #21252B;
+			font-family: sans-serif;
+			color: #ABB2BF;
+			font-size: large;
+		}
+
+		.title {
+			text-align: center;
+			font-size: xx-large;
+			color: #FFFFFF;
+			padding-bottom: 16px;
+		}
+
+		.center {
+			animation: fadeIn 1s;
+			background-color: #282C34;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 32px;
+			border-radius: 16px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #23A8F2;
+			box-shadow: 0 0 8px #23A8F2;
+		}
+	</style>
+	<script type="text/javascript">
+		var hosts = [
+			{
+				source: ['', 'www'],
+				target: 'https://www.peaksol.fun',
+				displayname: 'Peaksol.fun'
+			},
+			{
+				source: ['qq', 'q'],
+				target: 'https://jq.qq.com/?_wv=1027&k=5NRFBFD',
+				displayname: 'QQ'
+			},
+			{
+				source: ['bilibili', 'bili', 'b'],
+				target: 'https://space.bilibili.com/6933622',
+				displayname: 'Bilibili'
+			},
+			{
+				source: ['zhihu', 'z'],
+				target: 'https://www.zhihu.com/people/peaksol',
+				displayname: 'Zhihu'
+			},
+			{
+				source: ['discord', 'disc', 'd'],
+				target: 'https://discord.gg/gCs88pR',
+				displayname: 'Discord'
+			},
+			{
+				source: ['github', 'gh', 'g'],
+				target: 'https://www.github.com/TravinDreek/{pathname}',
+				displayname: 'GitHub'
+			}
+		]
+
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			return vars;
+		}
+
+		function goto(subdomain, pathname) {
+			
+		}
+
+		window.onload = function() {
+			var param = getUrlVars();
+			var subdomain = param['subdomain'] || '';
+			var pathname = param['pathname'] || ''
+			for(var i in hosts) {
+				if(hosts[i].source.includes(subdomain)) {
+					var target = hosts[i].target.replace('{pathname}', pathname);
+					document.getElementById('title').innerText = 'Redirecting...';
+					document.getElementById('body').innerHTML = 'Please stand by while you are being redirected to <a style="color: #23A8F2" href="' + target + '">' + hosts[i].displayname + '</a>.'
+					document.getElementById('message').hidden = false;
+					window.location.href = target;
+				}
+			}
+			if(document.getElementById('message').hidden) {
+				document.getElementById('title').innerText = 'Not Found';
+				document.getElementById('body').innerHTML = 'The subdomain is not found on my Web Router. You may want to go back to <a style="color: #23A8F2" href="https://peaksol.fun">my homepage</a>.';
+				document.getElementById('message').hidden = false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="center">
+		<div id="message" hidden><div class="title" id="title"></div><div id="body"></div></div>
+		<noscript><div class="title" style="color: #E06C75">JavaScript Support Required!</div><div>The redirection requires JavaScript to continue, which your browser doesn't support or is blocked on this page.</div></noscript>
+	</div>
+</body>
