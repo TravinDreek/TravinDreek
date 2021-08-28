@@ -16,14 +16,14 @@
 			font-size: large;
 		}
 
-		.title {
+		#title {
 			text-align: center;
 			font-size: xx-large;
 			color: #FFFFFF;
 			padding-bottom: 16px;
 		}
 
-		.center {
+		#msgbox {
 			animation: fadeIn 1s;
 			background-color: #282C34;
 			position: absolute;
@@ -40,11 +40,6 @@
 	</style>
 	<script type="text/javascript">
 		var hosts = [
-			{
-				source: ['', 'www'],
-				target: 'https://www.peaksol.fun',
-				displayname: 'Peaksol.fun'
-			},
 			{
 				source: ['qq', 'q'],
 				target: 'https://jq.qq.com/?_wv=1027&k=5NRFBFD',
@@ -67,48 +62,68 @@
 			},
 			{
 				source: ['github', 'gh', 'g'],
-				target: 'https://www.github.com/TravinDreek/{pathname}',
+				target: 'https://www.github.com/TravinDreek/{path}',
 				displayname: 'GitHub'
+			},
+			{
+				source: ['youtube', 'yt', 'y'],
+				target: 'https://www.youtube.com/channel/UCBYbRRwkPHw9w3vPT2B_pfQ',
+				displayname: 'YouTube'
+			},
+			{
+				source: ['twitter', 't'],
+				target: 'https://twitter.com/PeaksolM',
+				displayname: 'Twitter'
+			},
+			{
+				source: ['badlion', 'bl'],
+				target: 'https://www.badlion.net/u/Peaksol/{path}',
+				displayname: 'Badlion'
+			},
+			{
+				source: ['weibo', 'w'],
+				target: 'https://weibo.com/MCFLY233',
+				displayname: 'Weibo'
+			},
+			{
+				source: ['tieba'],
+				target: 'https://tieba.baidu.com/home/main?un=Peaksol',
+				displayname: 'Baidu Tieba'
+			},
+			{
+				source: ['reddit', 'r'],
+				target: 'https://www.reddit.com/user/Peaksol',
+				displayname: 'Reddit'
+			},
+			{
+				source: ['spigotmc', 'spigot', 's'],
+				target: 'https://www.spigotmc.org/members/travindreek.523965/',
+				displayname: 'SpigotMC'
 			}
-		]
-
-		function getUrlVars() {
-			var vars = {};
-			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-				vars[key] = value;
-			});
-			return vars;
-		}
-
-		function goto(subdomain, pathname) {
-			
-		}
+		];
 
 		window.onload = function() {
-			var param = getUrlVars();
-			var subdomain = param['subdomain'] || '';
-			var pathname = param['pathname'] || ''
-			for(var i in hosts) {
-				if(hosts[i].source.includes(subdomain)) {
-					var target = hosts[i].target.replace('{pathname}', pathname);
-					document.getElementById('title').innerText = 'Redirecting...';
-					document.getElementById('body').innerHTML = 'Please stand by while you are being redirected to <a style="color: #23A8F2" href="' + target + '">' + hosts[i].displayname + '</a>.'
-					document.getElementById('message').hidden = false;
-					window.location.href = target;
-				}
+			var slash = window.location.hash.indexOf('/');
+			var source = (slash == -1 ? 'default' : window.location.hash.substring(1, slash));
+			var path = (slash == -1 ? '' : window.location.hash.substr(slash + 1));
+			var host;
+			for(var i in hosts)
+				if(hosts[i].source.includes(source))
+					host = hosts[i];
+			if(host) {
+				document.getElementById('title').innerText = 'Redirecting...';
+				document.getElementById('message').innerHTML = 'Please stand by while you are being redirected to <a style="color: #23A8F2" href="' + host.target.replace('{path}', path) + '">' + host.displayname + '</a>.'
 			}
-			if(document.getElementById('message').hidden) {
+			else {
 				document.getElementById('title').innerText = 'Not Found';
-				document.getElementById('body').innerHTML = 'The subdomain is not found on my Web Router. You may want to go back to <a style="color: #23A8F2" href="https://peaksol.fun">my homepage</a>.';
-				document.getElementById('message').hidden = false;
+				document.getElementById('message').innerHTML = 'This shortcut is not found on my Web Router. You may want to go back to <a style="color: #23A8F2" href="https://peaksol.fun">my homepage</a>.';
 			}
 		}
 	</script>
 </head>
 
 <body>
-	<div class="center">
-		<div id="message" hidden><div class="title" id="title"></div><div id="body"></div></div>
-		<noscript><div class="title" style="color: #E06C75">JavaScript Support Required!</div><div>The redirection requires JavaScript to continue, which your browser doesn't support or is blocked on this page.</div></noscript>
+	<div id="msgbox">
+		<div id="title">JavaScript Support Required!</div><div id="message">The redirection requires JavaScript to continue, which is not supported by your browser or blocked on this page.</div>
 	</div>
 </body>

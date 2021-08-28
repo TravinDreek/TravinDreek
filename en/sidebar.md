@@ -5,8 +5,9 @@
   - [Resources](/en/resources.md)
 
 - Links
-  - [QQ](https://jq.qq.com/?_wv=1027&k=5NRFBFD)
-  - [Bilibili](https://space.bilibili.com/6933622)
-  - [Zhihu](https://www.zhihu.com/people/peaksol)
-  - [Discord](https://discord.gg/gCs88pR)
-  - [GitHub](https://github.com/TravinDreek)
+
+  - [QQ](https://aka.peaksol.fun/qq)
+  - [Bilibili](https://aka.peaksol.fun/bilibili)
+  - [Zhihu](https://aka.peaksol.fun/zhihu)
+  - [Discord](https://aka.peaksol.fun/discord)
+  - [GitHub](https://aka.peaksol.fun/github)

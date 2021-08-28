@@ -11,4 +11,4 @@ Programming is one of my hobbies. I found myself interested in programming a few
 ### About the Website
 This is my own little spot on the Internet, however as of yet I haven't thought of anything interesting to put on it. Everything on the website is in the sidebar as you can see.
 
-If you just want to stop by for a chat, I'm also happy to do that on my [Discord](https://discord.gg/gCs88pR) or [QQ Group](https://jq.qq.com/?_wv=1027&k=5NRFBFD).
+If you just want to stop by for a chat, I'm also happy to do that on my [Discord](https://aka.peaksol.fun/discord) or [QQ Group](https://aka.peaksol.fun/qq).

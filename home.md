@@ -11,4 +11,4 @@
 ### 关于此网站
 这是我自己建立的一个小站点, 但目前我还没想到有什么有趣的东西能放上去. 左边菜单里列出来的就是这个网站所有的东西了.
 
-如果你只是想过来聊聊天, 我也会很乐意地在 [Discord](https://discord.gg/gCs88pR) 或 [QQ](https://jq.qq.com/?_wv=1027&k=5NRFBFD) 群这么做的.
+如果你只是想过来聊聊天, 我也会很乐意地在 [Discord](https://aka.peaksol.fun/discord) 或 [QQ](https://aka.peaksol.fun/qq) 群这么做的.
