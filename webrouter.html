@@ -6,6 +6,7 @@
 	<style type="text/css">
 		@keyframes fadeIn {
 			from { opacity: 0 }
+			50% { opacity: 0}
 			to { opacity: 1 }
 		}
 
@@ -24,7 +25,7 @@
 		}
 
 		#msgbox {
-			animation: fadeIn 1s;
+			animation: fadeIn 2s;
 			background-color: #282C34;
 			position: absolute;
 			top: 50%;
@@ -104,9 +105,12 @@
 
 		window.onload = function() {
 			var slash = window.location.hash.indexOf('/');
-			var source = (slash == -1 ? 'default' : window.location.hash.substring(1, slash));
+			var source = (slash == -1 ? window.location.hash.substring(1) : window.location.hash.substring(1, slash));
 			var path = (slash == -1 ? '' : window.location.hash.substr(slash + 1));
 			var host;
+			console.log(slash);
+			console.log(slash == -1);
+			console.log(path);
 			for(var i in hosts)
 				if(hosts[i].source.includes(source))
 					host = hosts[i];
