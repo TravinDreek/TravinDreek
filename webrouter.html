@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Peaksol's Web Router</title>
+	<title>Web Router - Peaksol</title>
 	<style type="text/css">
 		@keyframes fadeIn {
 			from { opacity: 0 }
@@ -100,6 +100,11 @@
 				source: ['spigotmc', 'spigot', 's'],
 				target: 'https://www.spigotmc.org/members/travindreek.523965/',
 				displayname: 'SpigotMC'
+			},
+			{
+				source: ['neteasecloudmusic', 'cloudmusic', 'music', 'ncm'],
+				target: 'https://music.163.com/#/user/home?id=275038108',
+				displayname: 'Netease Cloud Music'
 			}
 		];
 
@@ -108,18 +113,16 @@
 			var source = (slash == -1 ? window.location.hash.substring(1) : window.location.hash.substring(1, slash));
 			var path = (slash == -1 ? '' : window.location.hash.substr(slash + 1));
 			var host;
-			console.log(slash);
-			console.log(slash == -1);
-			console.log(path);
 			for(var i in hosts)
 				if(hosts[i].source.includes(source))
 					host = hosts[i];
 			if(host) {
 				document.getElementById('title').innerText = 'Redirecting...';
 				document.getElementById('message').innerHTML = 'Please stand by while you are being redirected to <a style="color: #23A8F2" href="' + host.target.replace('{path}', path) + '">' + host.displayname + '</a>.'
+				window.location.href = host.target.replace('{path}', path);
 			}
 			else {
-				document.getElementById('title').innerText = 'Not Found';
+				document.getElementById('title').innerText = 'Invalid Shortcut';
 				document.getElementById('message').innerHTML = 'This shortcut is not found on my Web Router. You may want to go back to <a style="color: #23A8F2" href="https://peaksol.fun">my homepage</a>.';
 			}
 		}
