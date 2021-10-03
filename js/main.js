@@ -13,7 +13,7 @@ window.onload = function() {
 			element: title,
 			x: 0,
 			y: 0,
-			z: 10
+			z: 5
 		}
 	];
 
