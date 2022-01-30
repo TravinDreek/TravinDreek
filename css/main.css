@@ -1,16 +1,71 @@
-body {
-	color: #eeeeee;
+html {
 	margin: 0;
 	padding: 0;
-	background: url('/img/background.jpg') no-repeat center center fixed;
+	background: url('../img/background.jpg') no-repeat center center fixed;
 	background-color: #0E0139;
 	background-size: cover;
 	font-family: 'Varela Round', sans-serif;
+	scroll-behavior: smooth;
+}
+
+#socialsnav {
+	position: fixed;
+	right: 16px;
+	top: 16px;
+	opacity: 100%;
+	transition: opacity .2s;
+}
+
+#socialsnav a svg {
+	fill: white;
+	transition: fill .2s;
+}
+
+#socialsnav a svg:hover {
+	fill: #2881F9;
+	cursor: pointer;
 }
 
 a {
 	color: #ffffff;
 }
+
+#cover a {
+	color: #2881F9;
+	font-size: 16vw;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 0px 0px 32px #00000059;
+	font-weight: 900;
+	user-select: none;
+	transition: font-size .2s, color .2s;
+	text-decoration: none;
+}
+
+#cover a:hover {
+	font-size: 17vw;
+	color: #3c95f9;
+	cursor: pointer;
+}
+
+/*
+
+#peaksol {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#p {left: 50vw; top: 50vh}
+#e {left: 50vw; top: 50vh}
+#a {left: 50vw; top: 50vh}
+#k {left: 50vw; top: 50vh}
+#s {left: 50vw; top: 50vh}
+#o {left: 50vw; top: 50vh}
+#l {left: 50vw; top: 50vh}
+*/
 
 #about {
 	display: grid;
@@ -25,48 +80,11 @@ a {
 }
 
 .card {
+	color: #eeeeee;
 	padding: 16px;
 	background: #4E20E2e0;
 	box-shadow: 0px 0px 32px #00000080;
 	border-radius: 8px;
-}
-
-#title {
-	color: #2881F9;
-	font-size: 16vw;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%);
-	text-shadow: 0px 0px 32px #00000059;
-	font-weight: 900;
-	user-select: none;
-	transition: font-size .2s, color .2s;
-}
-
-#title:hover {
-	font-size: 17vw;
-	color: #3c95f9;
-	cursor: pointer;
-}
-
-#socialsnav {
-	position: fixed;
-	right: 16px;
-	top: 16px;
-	opacity: 100%;
-	transition: opacity .2s;
-}
-
-#socialsnav span svg {
-	fill: white;
-	transition: fill .2s;
-}
-
-#socialsnav span svg:hover {
-	fill: #2881F9;
-	cursor: pointer;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -77,10 +95,10 @@ a {
 }
 
 @media only screen and (max-width: 720px) {
-	#title {
+	#cover a {
 		font-size: 24vw;
 	}
-	#title:hover {
+	#cover a:hover {
 		font-size: 25vw;
 	}
 	#about {
