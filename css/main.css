@@ -1,17 +1,19 @@
 html {
+	scroll-behavior: smooth;
+	font-family: 'Varela Round', sans-serif;
+}
+
+body {
 	margin: 0;
 	padding: 0;
-	background: url('../img/background.jpg') no-repeat center center fixed;
 	background-color: #0E0139;
-	background-size: cover;
-	font-family: 'Varela Round', sans-serif;
-	scroll-behavior: smooth;
 }
 
 #socialsnav {
 	position: fixed;
 	right: 16px;
 	top: 16px;
+	z-index: 1;
 	opacity: 100%;
 	transition: opacity .2s;
 }
@@ -28,6 +30,13 @@ html {
 
 a {
 	color: #ffffff;
+}
+
+#bg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.05);
 }
 
 #cover a {
@@ -49,23 +58,6 @@ a {
 	color: #3c95f9;
 	cursor: pointer;
 }
-
-/*
-
-#peaksol {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-#p {left: 50vw; top: 50vh}
-#e {left: 50vw; top: 50vh}
-#a {left: 50vw; top: 50vh}
-#k {left: 50vw; top: 50vh}
-#s {left: 50vw; top: 50vh}
-#o {left: 50vw; top: 50vh}
-#l {left: 50vw; top: 50vh}
-*/
 
 #about {
 	display: grid;
