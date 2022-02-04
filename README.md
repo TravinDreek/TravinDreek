@@ -3,7 +3,7 @@ Hello, there! I am **Peaksol**, a random developer. I don't like spending much t
 - Creating Bukkit (and somehow PocketMine) plugins
 - Frontend and backend Web development
 - Making bots that run on Discord and QQ
-- Coding some random stuffs
+- Coding some random stuff
 
 And here are some of the programming languages that I use for my projects:
 
