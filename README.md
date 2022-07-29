@@ -1,12 +1,16 @@
-# Get to know me...
-Hello, there! I am **Peaksol**, a random developer. I don't like spending much time on a README file so here I am making it simple about what I am doing:
-- Creating Bukkit (and somehow PocketMine) plugins
-- Frontend and backend Web development
-- Making bots that run on Discord and QQ
-- Coding some random stuff
+# [Give up GitHub](https://GiveUpGitHub.org)
+**GitHub is a
+proprietary, trade-secret system that is not free as in freedom, and their Copilot service pays no respect to the terms and conditions of the code it adapts from.**
 
-And here are some of the programming languages that I use for my projects:
+From now on, I'll no longer host my new projects on GitHub. Any of my existing projects hosted on GitHub are scheduled to be archived or deleted.
 
-![Lang](https://github-readme-stats.vercel.app/api/top-langs/?username=TravinDreek&layout=compact&theme=tokyonight)
+Please follow me on [Codeberg](https://codeberg.org/Peaksol) instead, where I'll continue contributing to the free software community. Should you have any questions, shoot me an email at <p@peaksol.org>, or contact me through any other ways listed on [my personal site](https://www.peaksol.org/).
 
-Take a quick look at [my homepage](https://peaksol.fun/), and learn more about me and what I am doing!
+If you are looking for more information, read about the
+[Give Up GitHub](https://GiveUpGitHub.org) campaign from
+the Software Freedom Conservancy to understand
+why GitHub is not a good place to host your projects. Benjamin Mako Hill also stressed the importance of a free development platform in [this essay](https://mako.cc/writing/hill-free_tools.html).
+
+Please share about this with as many people as you know, and make sure they escape to freedom as well. You are free to include this text in your README files.
+
+![Logo of the GiveUpGitHub campaign](https://sfconservancy.org/img/GiveUpGitHub.png)
